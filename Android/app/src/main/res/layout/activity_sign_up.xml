@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp">
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"></TextView>
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSignUp"
+        android:text="@string/id"
+        android:textSize="25sp"></TextView>
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/id"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_gravity="left"
+        android:layout_below="@id/tvId"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""></EditText>
+
+    <Button
+        android:id="@+id/btIdExistence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/idok"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="right"
+        android:layout_toRightOf="@id/etId"
+        android:layout_below="@id/tvId"
+        android:layout_alignParentRight="true"></Button>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textSize="25sp"
+        android:layout_below="@id/etId"></TextView>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_below="@id/tvName"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""></EditText>
+
+    <TextView
+        android:id="@+id/tvPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pw"
+        android:textSize="25sp"
+        android:layout_below="@id/etName"></TextView>
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/pw"
+        android:inputType="textPassword"
+        android:imeOptions="actionNext"
+        android:layout_below="@id/tvPw"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""></EditText>
+
+    <TextView
+        android:id="@+id/tvPwOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPw"
+        android:text="@string/pwok"
+        android:textSize="25sp"></TextView>
+
+    <TextView
+        android:id="@+id/tvPwEqual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pwequal"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"
+        android:layout_toRightOf="@id/tvPwOk"
+        android:layout_above="@id/etPwok"
+        android:layout_margin="10dp"></TextView>
+
+    <EditText
+        android:id="@+id/etPwok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPwOk"
+        android:hint="@string/pwok"
+        android:imeOptions="actionSend"
+        android:inputType="textPassword"
+        android:autofillHints=""></EditText>
+
+    <Button
+        android:id="@+id/btSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_below="@id/rgWardOrGuard"
+        android:layout_centerHorizontal="true"></Button>
+
+    <RadioGroup
+        android:id="@+id/rgWardOrGuard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPwok"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/rbGuard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guard"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rbWard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ward"
+            android:textSize="20sp"/>
+    </RadioGroup>
+</RelativeLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        design:tabGravity="fill"
+        design:tabSelectedTextColor="@color/colorAccent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/map" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btWard"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="right|bottom"
+                android:background="#ffffff"
+                android:text="길찾기 연결"
+                android:layout_marginRight="165dp"
+                android:layout_marginBottom
+                    ="20dp"/>
+                <Button
+                    android:id="@+id/btCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="#ffffff"
+                    android:text="길찾기 취소"
+                    android:layout_marginRight="65dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/btCamera"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/place2" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <Button
+                android:id="@+id/btSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="@string/signin"
+                android:layout_margin="20dp"></Button>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:textSize="30sp"
+                android:visibility="gone"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/btConnect"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#FFFFFF"
+                android:text="피보호자 또는 보호자 연결"
+                android:layout_gravity="center"
+                android:visibility="gone"></Button>
+
+            <Button
+                android:id="@+id/btDisconnect"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#FFFFFF"
+                android:text="피보호자 또는 보호자 연결 해제"
+                android:layout_gravity="center"
+                android:visibility="gone"></Button>
+
+            <Button
+                android:id="@+id/btLogOut"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/logout"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:visibility="gone"></Button>
+
+            <Button
+                android:id="@+id/btWithdrawal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:text="회원탈퇴"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:visibility="gone"></Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:layout_margin="20dp">
+
+            <TableRow android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 출발지 : "/>
+
+                <EditText
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etstart"
+                    android:hint="출발지 입력"
+                    />
+
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 목적지 : "/>
+
+                <EditText
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etdestination"
+                    android:hint="목적지 입력"
+                    />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <Button
+                    android:id="@+id/btSearchRoute"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="#ffffff"
+
+                    android:text="검색"
+                    android:layout_column="0"
+                    android:layout_weight="0.21" />
+
+                <Button
+                    android:id="@+id/btCancelRoute"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="45dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="#ffffff"
+
+                    android:text="취소"
+                    android:layout_weight="0.21"/>
+            </TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/tvTotalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="#000000"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvTotalWalkTime"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:textColor="#000000" />-->
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop ="10dp"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

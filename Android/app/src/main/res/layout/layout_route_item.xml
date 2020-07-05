@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp">
+
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivType"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvTrafficType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvNo"
+        android:textSize="15dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/tvSectionTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvTrafficType"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivType"
+        android:layout_below="@id/tvNo"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/tvEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivType"
+        android:layout_below="@id/tvStart"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+</RelativeLayout>

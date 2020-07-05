@@ -1,0 +1,2 @@
+include ':app', ':naveridlogin_android_sdk_4.2.6', ':SDK_release_v2.0.0'
+rootProject.name='Project'

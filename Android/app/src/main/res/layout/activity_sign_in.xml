@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp">
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/signin"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        android:textSize="25sp"
+        android:layout_below="@id/tvSignIn"></TextView>
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/id"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_below="@id/tvId"></EditText>
+
+    <TextView
+        android:id="@+id/tvPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pw"
+        android:layout_below="@id/etId"
+        android:textSize="25sp"></TextView>
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPw"
+        android:layout_alignTop="@id/etId"
+        android:layout_marginTop="80dp"
+        android:hint="@string/pw"
+        android:imeOptions="actionGo"
+        android:inputType="textPassword"></EditText>
+
+    <Button
+        android:id="@+id/btSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPw"
+        android:layout_alignTop="@id/etId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="162dp"
+        android:background="@color/colorAccent"
+        android:text="@string/signin"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="100dp"></Button>
+
+        <Button
+            android:id="@+id/btSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원이 아니신가요?"
+            android:background="#00ff0000"
+            android:layout_below="@id/btSignIn"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold">
+        </Button>
+    <!--    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton-->
+    <!--        android:id="@+id/btNaverLogin"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "858690294043",
+    "firebase_url": "https://hgbholgabun.firebaseio.com",
+    "project_id": "hgbholgabun",
+    "storage_bucket": "hgbholgabun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858690294043:android:ab950ebc545b15111bc3be",
+        "android_client_info": {
+          "package_name": "kr.ac.skhu.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858690294043-mii9qvonq6ipueph1vlfn42f4qjfovml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRhvI_Ezg0OJq9yK5fBFCwunMUOhkzjKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858690294043-mii9qvonq6ipueph1vlfn42f4qjfovml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
